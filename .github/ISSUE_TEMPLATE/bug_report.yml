@@ -1,0 +1,88 @@
+name: Bug
+description: Reportar um comportamento incorreto e reproduzivel
+title: "fix: "
+labels: [bug, triagem]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por reportar. Nao inclua senhas, tokens ou dados pessoais.
+        Falhas de seguranca devem ser enviadas em Security > Report a vulnerability.
+  - type: checkboxes
+    id: pre-requisitos
+    attributes:
+      label: Pre-requisitos
+      options:
+        - label: Pesquisei nas issues abertas e fechadas e nao encontrei duplicata
+          required: true
+        - label: Estou usando a versao mais recente do projeto
+          required: true
+        - label: Confirmo que nao ha credenciais ou dados sensiveis neste relato
+          required: true
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descricao do problema
+      description: Explique de forma objetiva o que esta errado
+    validations:
+      required: true
+  - type: textarea
+    id: reproducao
+    attributes:
+      label: Passos para reproduzir
+      value: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Comportamento esperado
+    validations:
+      required: true
+  - type: textarea
+    id: atual
+    attributes:
+      label: Comportamento atual
+    validations:
+      required: true
+  - type: dropdown
+    id: severidade
+    attributes:
+      label: Severidade
+      options:
+        - Critica - sistema indisponivel ou perda de dados
+        - Alta - funcionalidade principal quebrada sem contorno
+        - Media - funcionalidade quebrada com contorno
+        - Baixa - impacto visual ou menor
+    validations:
+      required: true
+  - type: input
+    id: versao
+    attributes:
+      label: Versao do projeto
+      placeholder: "1.4.2 ou commit sha"
+    validations:
+      required: true
+  - type: textarea
+    id: ambiente
+    attributes:
+      label: Ambiente
+      value: |
+        - Sistema operacional: 
+        - Runtime e versao: 
+        - Navegador e versao: 
+        - Banco de dados: 
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs ou stack trace
+      description: Cole a saida relevante. Remova qualquer dado sensivel.
+      render: shell
+  - type: textarea
+    id: extra
+    attributes:
+      label: Contexto adicional
+      description: Prints, hipoteses de causa raiz ou possivel solucao.
