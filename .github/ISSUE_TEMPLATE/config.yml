@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Reportar vulnerabilidade de seguranca
+    url: https://github.com/cleitonSam/.github/blob/main/SECURITY.md
+    about: Falhas de seguranca NAO devem ser abertas em issue publica. Siga a politica de seguranca.
+  - name: Duvida de uso ou ajuda
+    url: https://github.com/cleitonSam/.github/blob/main/SUPPORT.md
+    about: Veja os canais oficiais de suporte antes de abrir uma issue.
+  - name: Padrao de engenharia e contribuicao
+    url: https://github.com/cleitonSam/.github/blob/main/CONTRIBUTING.md
+    about: Fluxo de branches, Conventional Commits e checklist de qualidade.
