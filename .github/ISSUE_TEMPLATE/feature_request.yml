@@ -1,0 +1,69 @@
+name: Feature
+description: Propor uma nova funcionalidade ou melhoria
+title: "feat: "
+labels: [enhancement, triagem]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Descreva o problema antes da solucao. Proposta sem problema claro nao entra no roadmap.
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema ou oportunidade
+      description: Qual dor real isso resolve e para quem
+    validations:
+      required: true
+  - type: textarea
+    id: solucao
+    attributes:
+      label: Solucao proposta
+    validations:
+      required: true
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas consideradas
+      description: O que mais foi avaliado e por que foi descartado
+  - type: textarea
+    id: aceite
+    attributes:
+      label: Criterios de aceite
+      value: |
+        - [ ] Dado ... quando ... entao ...
+        - [ ] 
+    validations:
+      required: true
+  - type: dropdown
+    id: impacto
+    attributes:
+      label: Impacto esperado
+      options:
+        - Alto - destrava receita, reduz risco ou custo relevante
+        - Medio - melhora consistente de experiencia ou produtividade
+        - Baixo - ajuste incremental
+    validations:
+      required: true
+  - type: dropdown
+    id: esforco
+    attributes:
+      label: Esforco estimado
+      options:
+        - P - ate 1 dia
+        - M - ate 1 semana
+        - G - acima de 1 semana
+        - Nao sei estimar
+  - type: checkboxes
+    id: riscos
+    attributes:
+      label: Riscos e dependencias
+      options:
+        - label: Quebra compatibilidade (BREAKING CHANGE)
+        - label: Exige migracao de banco de dados
+        - label: Exige nova dependencia externa
+        - label: Tem impacto em seguranca ou dados pessoais
+  - type: textarea
+    id: extra
+    attributes:
+      label: Contexto adicional
+      description: Referencias, mockups, links ou exemplos de mercado.
